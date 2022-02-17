@@ -1,0 +1,21 @@
+{% extends 'main/layout.html' %}
+
+{% block title  %}Форма по добавлению статьи{% endblock %}
+
+{% block content %}
+<div class="features">
+    <h1 class="mt-4">Добавление записи</h1>
+  <!-- Button trigger modal -->
+
+    <form method="post">
+        {% csrf_token %}
+        <p>{{ form }}</p>
+        <button id="121" type="submit" class="btn btn-primary">
+  Добавить новую статью
+</button>
+        {% csrf_token %}
+    </form>
+</div>
+
+
+{% endblock %}

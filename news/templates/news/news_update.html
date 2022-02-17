@@ -1,0 +1,20 @@
+{% extends 'main/layout.html' %}
+
+{% block title  %}Редактирование статьи{% endblock %}
+
+{% block content %}
+<div class="features">
+    <h1 class="mt-4">Редактирование записи</h1>
+  <!-- Button trigger modal -->
+
+    <form method="post">
+        {% csrf_token %}
+        <p>{{ form }}</p>
+        <p>{{ error }}</p>
+        <button id="127" type="submit" class="btn btn-primary">
+  Редактировать статью
+</button></form>
+</div>
+
+
+{% endblock %}

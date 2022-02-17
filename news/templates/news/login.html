@@ -1,0 +1,19 @@
+{% extends 'main/layout.html' %}
+
+{% block content  %}
+   <h1 class="features mt-4">Авторизация</h1>
+   <p><a id="124" href="/">Вернуться на главную</a></p>
+<div class = "features">
+
+   <form id="add_form" class="" method="post">
+   {% csrf_token %}
+   <p>{{form}}</p>
+   </form>
+
+
+
+   <button id="125" form="add_form" type="submit" class="btn btn-primary mt-4">Авторизация</button>
+</div>
+
+
+{% endblock %}

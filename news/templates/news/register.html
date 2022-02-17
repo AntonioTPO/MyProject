@@ -1,0 +1,25 @@
+{% extends 'main/layout.html' %}
+
+{% block content  %}
+   <h1 class="features" align="center">Регистрация</h1>
+   <p><a id="128" href="/">Вернуться на главную</a></p>
+<div class = " features">
+
+   <form id="add_form" method="post">
+   {% csrf_token %}
+<h6>Никнейм:</h6>
+   <p>{{form.username}}</p>
+      <h6>Пароль:</h6>
+       <p>{{form.password}}</p>
+
+      <h6>Пароль:</h6>
+       <p>{{form.password1}}</p>
+
+      <h6>Подвтверждение пароля:</h6>
+       <p>{{form.password2}}</p>
+   </form>
+   <button id="129" form="add_form" type="submit" class="btn btn-primary mt-4" name="reg_button">Регистрация</button>
+</div>
+
+
+{% endblock content %}

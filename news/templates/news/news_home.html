@@ -1,0 +1,24 @@
+{% extends 'main/layout.html' %}
+
+{% block title  %}Новости на сайте{% endblock %}
+
+{% block content  %}
+    <div class="features">
+        <h1>Новости на сайте</h1>
+        {% if news %}
+        {% for next in news %}
+            <div class = "alert alert-danger">
+                <h3>{{ next.title }}</h3>
+                <p>{{ next.anons }}</p>
+                {% if request.user.is_authenticated %}
+                <a id="127" href="{% url 'news_detail' next.id %}" class="btn btn-danger">Читать статью</a>
+                {% else %}
+                <a id="128" href="{% url 'register_page'%}" class="btn btn-danger">Читать статью</a>
+                {% endif %}
+            </div>
+        {% endfor %}
+        {% else  %}
+            <p>У Вас нет записей!</p>
+        {% endif %}
+    </div>
+{% endblock %}
